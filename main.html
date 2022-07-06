@@ -9,7 +9,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="createNew-window">
+  <div class="topBar">
+  <header>Library</header>
+  <div class="bookCount">
+<div class="totalBooks">
+  <p>Total Books :</p>
+  <p>0</p>
+</div>
+<div class="booksRead">
+<p>Books Read :</p>
+<p>0</p>
+</div>
+  </div>
+</div>
+  <div class="createNew-window" id="createNew-closed">
     <h1>Add New Book</h1>
     <input type="text" placeholder="Book">
     <input type="text" placeholder="Author">
@@ -17,7 +30,7 @@
     <div class="readStatus">
       <p>I read this book</p>
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" id="checkBox">
         <span class="slider round"></span>
       </label>
     </div>

@@ -185,7 +185,10 @@ box-shadow: 0px 1px 6px rgb(194, 194, 194);
   margin-left: 2%;
   font-weight: 600;
   letter-spacing: 1%;
+  cursor: pointer;
+  transition: 500ms;
 }
+
 
 .bookCount {
   display: flex;
@@ -195,11 +198,13 @@ box-shadow: 0px 1px 6px rgb(194, 194, 194);
   font-family: var(--main-font);
   font-size: 1.5vw;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .bookCount div {
   display: flex;
   white-space: nowrap;
+  transition: 500ms;
 }
 
 .bookCount div > p {
@@ -225,7 +230,17 @@ box-shadow: 0px 1px 6px rgb(194, 194, 194);
   background-color: rgb(218, 218, 218);
 }
 
+
+
 /* Hovers --- */
+
+header:hover {
+  transform: translate(0, -3%);
+}
+
+.bookCount div:hover {
+  transform: translate(0, -3%);
+}
 
 .submitNew:hover {
 background-color: #78df70;

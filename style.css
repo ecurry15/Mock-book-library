@@ -10,6 +10,7 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  transform-origin: 0 0;
 }
 
 .darkWrap {
@@ -47,11 +48,14 @@ padding-bottom: 4%;
  border-radius: 2%;
  box-shadow: 0px 1px 7px rgb(102, 102, 102);
  z-index: 3;
+ animation: fade-in 300ms forwards;
+
 }
 
 #createNew-closed {
   display: none;
 }
+
 
 .createNew-window > h1 {
   font-family: var(--main-font);
@@ -229,4 +233,15 @@ background-color: #78df70;
 
 .submitNew:active {
   transform: scale(.98);
+}
+
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(-50%) scale(.1);
+    
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
 }

@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-font: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.createNew-window {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+padding-bottom: 4%;
+  position: absolute;
+  background-color: white;
+ text-align: center;
+ align-items: center;
+  left: 0;
+ right: 0;
+ margin-left: auto;
+ margin-right: auto;
+ top: 50%;
+ transform: translateY(-50%);
+ border-radius: 2%;
+ box-shadow: 0px 2px 7px rgb(209, 209, 209);
+ backdrop-filter: blur(2px);
+}
+
+.createNew-window > h1 {
+  font-family: var(--main-font);
+font-size: 1.8vw;
+}
+
+
+.createNew-window > input {
+  background-color: #f4f4f4;
+  width: 80%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  margin-top: 3%;
+  font-size: 1.2vw;
+border: none;
+outline: none;
+font-family: var(--main-font);
+}
+
+.readStatus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  width: 100%;
+}
+
+.readStatus > p {
+  font-family: var(--main-font);
+  font-size: 1.2vw;
+  justify-self: center;
+}
+
+.submitNew {
+  font-family: var(--main-font);
+font-size: 1.2vw;
+width: 80%;
+padding-top: 2%;
+padding-bottom: 2%;
+border: none;
+border-radius: .5vw;
+margin-top: 3%;
+background-color: #7be973;
+cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.8vw;
+  height: 2vw;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 80%;
+  width: 45%;
+  left: 6%;
+  bottom: 10.5%;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #7be973;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #7be973;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(95%);
+  -ms-transform: translateX(95%);
+  transform: translateX(95%);
+}
+
+.slider.round {
+  border-radius: 1vw;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Hovers --- */
+
+.submitNew:hover {
+background-color: #78df70;
+}
+
+.submitNew:active {
+  transform: scale(.98);
+}

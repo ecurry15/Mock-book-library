@@ -8,20 +8,22 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="body">
+  <div class="darkWrap" id="darkWrapOff"></div>
   <div class="topBar">
   <header>Library</header>
   <div class="bookCount">
 <div class="totalBooks">
   <p>Total Books :</p>
-  <p>0</p>
+  <p id="totalBookNum">0</p>
 </div>
 <div class="booksRead">
 <p>Books Read :</p>
-<p>0</p>
+<p id="bookReadNum">0</p>
 </div>
   </div>
 </div>
+<h1 class="addNew">+ Add New Book</h1>
   <div class="createNew-window" id="createNew-closed">
     <h1>Add New Book</h1>
     <input type="text" placeholder="Book">

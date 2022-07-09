@@ -174,13 +174,13 @@ input:checked + .slider:before {
   background-color: white;
   margin-top: 0;
 align-items: center;
-height: min(150px, 20vh);
+height: min(155px, 32vw);
 box-shadow: 0px 1px 6px rgb(194, 194, 194);
 }
 
 .topBar header {
   font-family: var(--main-font);
-  font-size: 2.5vw;
+  font-size: clamp(22px, 2.5vw, 80px);
   margin-left: 2%;
   font-weight: 600;
   letter-spacing: 1%;
@@ -192,10 +192,10 @@ box-shadow: 0px 1px 6px rgb(194, 194, 194);
 .bookCount {
   display: flex;
   flex-direction: row;
-  gap: 20%;
+  gap: 5vw;
   margin-right: 8%;
   font-family: var(--main-font);
-  font-size: 1.5vw;
+  font-size: clamp(15px, 1.5vw, 80px);
   font-weight: 500;
   cursor: pointer;
 }
@@ -268,14 +268,14 @@ padding-bottom: 2.5%;
 
 .addNew {
   font-family: var(--main-font);
-  font-size: 1.7vw;
+  font-size: clamp(13px, 1.7vw, 80px);
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   padding-top: .5%;
   padding-bottom: .5%;
   margin-top: 1%;
-  width: 16%;
+  width: clamp(200px, 16%, 400px);
   cursor: pointer;
   border-radius: .5vw;
 }
@@ -312,5 +312,32 @@ background-color: #78df70;
   }
   100% {
     transform: translateY(-50%) scale(1);
+  }
+}
+
+
+@media (min-width: 2000px) {
+  .topBar {
+    height: 250px;
+  }
+}
+
+@media (max-width: 450px) {
+  .bookCount {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-right: 8%;
+    font-size: clamp(13px, 1.5vw, 80px);
+    font-weight: 500;
+  
+  }
+
+  .booksRead {
+    margin-top: -15%;
+  }
+
+  .addNew {
+    margin-top: 6%;
   }
 }

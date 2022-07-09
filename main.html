@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
-<body class="body">
+<body>
   <div class="darkWrap" id="darkWrapOff"></div>
   <div class="topBar">
   <header>Library</header>
@@ -24,11 +24,34 @@
   </div>
 </div>
 <h1 class="addNew">+ Add New Book</h1>
+<section class="mainContent">
+  <!--<div class="bookCards">
+    <h1>test</h1>
+    <p>yeah</p>
+    <p>123 pages</p>
+    <p>not read</p>
+    <button>Remove</button>
+  </div>
+  <div class="bookCards">
+    <h1>test</h1>
+    <p>yeah</p>
+    <p>123 pages</p>
+    <p>not read</p>
+    <button>Remove</button>
+  </div>
+  <div class="bookCards">
+    <h1>test</h1>
+    <p>yeah</p>
+    <p>123 pages</p>
+    <p>not read</p>
+    <button>Remove</button>
+  </div> -->
+</section>
   <div class="createNew-window" id="createNew-closed">
     <h1>Add New Book</h1>
-    <input type="text" placeholder="Book">
-    <input type="text" placeholder="Author">
-    <input type="number" placeholder="Pages">
+    <input type="text" placeholder="Title" id="title" required>
+    <input type="text" placeholder="Author" id="author" required>
+    <input type="number" placeholder="Pages" id="pages" required>
     <div class="readStatus">
       <p>I read this book</p>
       <label class="switch">

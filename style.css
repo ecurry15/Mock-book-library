@@ -212,6 +212,61 @@ box-shadow: 0px 1px 6px rgb(194, 194, 194);
 }
 /*TOP BAR --- END*/
 
+.mainContent {
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2%;
+}
+
+.bookCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  font-family: var(--main-font);
+  box-shadow: 0px 1px 4px rgb(199, 199, 199);
+  border-radius: .5vw;
+  padding-bottom: 5%;
+}
+
+.bookCards p {
+font-size: 1.1vw;
+width: 80%;
+text-align: center;
+padding-top: 2.5%;
+padding-bottom: 2.5%;
+}
+
+#bookRead {
+  font-size: 1.1vw;
+width: 80%;
+text-align: center;
+padding-top: 2.5%;
+padding-bottom: 2.5%;
+background-color: #78df70;
+border-radius: .4vw;
+}
+
+#bookNotRead {
+  font-size: 1.1vw;
+width: 80%;
+text-align: center;
+padding-top: 2.5%;
+padding-bottom: 2.5%;
+background-color: #ff9c9c;
+border-radius: .4vw;
+}
+
+.bookCards button {
+border: none;
+font-size: 1.1vw;
+width: 80%;
+padding-top: 2.5%;
+padding-bottom: 2.5%;
+}
+
 .addNew {
   font-family: var(--main-font);
   font-size: 1.7vw;

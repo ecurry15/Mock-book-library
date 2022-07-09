@@ -89,17 +89,22 @@ checkBox.addEventListener('click', function() {
 console.log(checkBoxClicked);
 });
 
+
 submitNew.addEventListener('click', function() {
-  createNewCard.id = 'createNew-closed';
-  darkWrap.id = 'darkWrapOff';
-  createNewBook();
-  addBookToLibrary();
-console.log(myLibrary);
-bookTally += 1;
-totalBookNum.textContent = bookTally;
-if(checkBoxClicked) {
-  readBookTally += 1;
-  bookReadNum.textContent = readBookTally;
+  if (title.value == "" || author.value == "" || pages.value == "") {
+
+  } else {
+    createNewCard.id = 'createNew-closed';
+    darkWrap.id = 'darkWrapOff';
+    createNewBook();
+    addBookToLibrary();
+  console.log(myLibrary);
+  bookTally += 1;
+  totalBookNum.textContent = bookTally;
+  if(checkBoxClicked) {
+    readBookTally += 1;
+    bookReadNum.textContent = readBookTally;
+  }
 }
 })
 

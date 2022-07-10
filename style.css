@@ -33,7 +33,7 @@ body {
 .createNew-window {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: clamp(300px, 25%, 800px);
 padding-bottom: 4%;
   position: absolute;
   background-color: white;
@@ -59,7 +59,7 @@ padding-bottom: 4%;
 
 .createNew-window > h1 {
   font-family: var(--main-font);
-font-size: 1.8vw;
+font-size: clamp(15px, 1.8vw, 40px);
 }
 
 
@@ -70,7 +70,7 @@ font-size: 1.8vw;
   padding-bottom: 2%;
   padding-left: 2%;
   margin-top: 3%;
-  font-size: 1.2vw;
+  font-size: clamp(12px, 1.2vw, 40px);
 border: none;
 outline: none;
 font-family: var(--main-font);
@@ -87,13 +87,13 @@ font-family: var(--main-font);
 
 .readStatus > p {
   font-family: var(--main-font);
-  font-size: 1.2vw;
+  font-size: clamp(12px, 1.2vw, 40px);
   justify-self: center;
 }
 
 .submitNew {
   font-family: var(--main-font);
-font-size: 1.2vw;
+font-size: clamp(12px, 1.2vw, 40px);
 width: 80%;
 padding-top: 2%;
 padding-bottom: 2%;
@@ -107,8 +107,8 @@ cursor: pointer;
 .switch {
   position: relative;
   display: inline-block;
-  width: 3.8vw;
-  height: 2vw;
+  width: clamp(40px, 3.8vw, 150px);
+  height: clamp(20px, 2vw, 150px);
 }
 
 .switch input {
@@ -156,7 +156,7 @@ input:checked + .slider:before {
 }
 
 .slider.round {
-  border-radius: 1vw;
+  border-radius: 30px;
 }
 
 .slider.round:before {

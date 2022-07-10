@@ -230,8 +230,13 @@ box-shadow: 0px 1px 6px rgb(194, 194, 194);
   padding-bottom: 5%;
 }
 
+.bookCards h1 {
+  font-size: clamp(14px, 1.4vw, 40px);
+}
+
+
 .bookCards p {
-font-size: 1.1vw;
+font-size: clamp(12px, 1.1vw, 40px);
 width: 80%;
 text-align: center;
 padding-top: 2.5%;
@@ -239,7 +244,7 @@ padding-bottom: 2.5%;
 }
 
 #bookRead {
-  font-size: 1.1vw;
+  font-size: clamp(12px, 1.1vw, 40px);
 width: 80%;
 text-align: center;
 padding-top: 2.5%;
@@ -249,7 +254,7 @@ border-radius: .4vw;
 }
 
 #bookNotRead {
-  font-size: 1.1vw;
+  font-size: clamp(12px, 1.1vw, 40px);
 width: 80%;
 text-align: center;
 padding-top: 2.5%;
@@ -260,7 +265,7 @@ border-radius: .4vw;
 
 .bookCards button {
 border: none;
-font-size: 1.1vw;
+font-size: clamp(12px, 1.1vw, 40px);
 width: 80%;
 padding-top: 2.5%;
 padding-bottom: 2.5%;

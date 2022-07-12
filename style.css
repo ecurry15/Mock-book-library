@@ -227,7 +227,7 @@ box-shadow: 0px 1px 6px rgb(194, 194, 194);
   font-family: var(--main-font);
   box-shadow: 0px 1px 4px rgb(199, 199, 199);
   border-radius: .5vw;
-  padding-bottom: 5%;
+  padding-bottom: 5.5%;
 }
 
 .bookCards h1 {
@@ -239,8 +239,8 @@ box-shadow: 0px 1px 6px rgb(194, 194, 194);
 font-size: clamp(12px, 1.1vw, 40px);
 width: 80%;
 text-align: center;
-padding-top: 2.5%;
-padding-bottom: 2.5%;
+padding-top: 2%;
+padding-bottom: 1.5%;
 }
 
 #bookRead {
@@ -263,12 +263,14 @@ background-color: #ff9c9c;
 border-radius: .4vw;
 }
 
-.bookCards button {
+#remove {
 border: none;
 font-size: clamp(12px, 1.1vw, 40px);
 width: 80%;
 padding-top: 2.5%;
 padding-bottom: 2.5%;
+border-radius: .4vw;
+cursor: pointer;
 }
 
 .addNew {
@@ -309,6 +311,9 @@ background-color: #78df70;
   transform: scale(.98);
 }
 
+#remove:hover { 
+background-color: #ff9c9c;
+}
 
 @keyframes fade-in {
   0% {
@@ -335,7 +340,7 @@ background-color: #78df70;
     margin-right: 8%;
     font-size: clamp(13px, 1.5vw, 80px);
     font-weight: 500;
-  
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   }
 
   .booksRead {
@@ -344,5 +349,10 @@ background-color: #78df70;
 
   .addNew {
     margin-top: 6%;
+  }
+
+  .mainContent {
+    margin-left: 3%;
+    margin-right: 3%;
   }
 }

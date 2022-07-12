@@ -24,7 +24,7 @@ const title = document.getElementById('title');
 const author = document.getElementById('author');
 const pages = document.getElementById('pages');
 const test = document.getElementById('test');
-
+const removeButton = document.getElementById('remove');
 let bookPositions = [];
 
 let createNewBook = function() {
@@ -42,7 +42,6 @@ let createNewBook = function() {
   const card = document.createElement('div');
   card.className = "bookCards";
   mainContent.appendChild(card);
-
   // Book Title --//
   const bookTitle = document.createElement('h1');
   bookTitle.textContent = myLibrary[myLibrary.length - 1].title;
@@ -68,6 +67,13 @@ if (myLibrary[myLibrary.length - 1].read == false) {
   readStatus.id = "bookRead";
 }
 card.appendChild(readStatus);
+
+//Remove Button --- //
+const newRemoveButtons = document.createElement('button');
+newRemoveButtons.id = "remove";
+newRemoveButtons.textContent = "Remove";
+newRemoveButtons.setAttribute('data-bookCard', `${myLibrary.length - 1}`);
+card.appendChild(newRemoveButtons);
   }
 
 
@@ -108,3 +114,10 @@ submitNew.addEventListener('click', function() {
 }
 })
 
+document.addEventListener('click', function(e) {
+if(e.target && e.target.id === 'remove') {
+  console.log(e.target.dataset.bookcard);
+  myLibrary.splice(e.target.dataset.bookcard, 1);
+  e.target.closest('div').remove();
+}
+});

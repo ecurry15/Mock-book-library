@@ -56,12 +56,10 @@ padding-bottom: 4%;
   display: none;
 }
 
-
 .createNew-window > h1 {
   font-family: var(--main-font);
 font-size: clamp(15px, 1.8vw, 40px);
 }
-
 
 .createNew-window > input {
   background-color: #f4f4f4;
@@ -162,7 +160,6 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
 /*NEW BOOK CARD --- END*/
 
 /*TOP BAR --- */
@@ -188,7 +185,6 @@ box-shadow: 0px 1px 6px rgb(194, 194, 194);
   transition: 500ms;
 }
 
-
 .bookCount {
   display: flex;
   flex-direction: row;
@@ -211,6 +207,7 @@ box-shadow: 0px 1px 6px rgb(194, 194, 194);
 }
 /*TOP BAR --- END*/
 
+/* Main Content --- */
 .mainContent {
   margin-left: 1.5%;
   margin-right: 1.5%;
@@ -233,7 +230,6 @@ box-shadow: 0px 1px 6px rgb(194, 194, 194);
 .bookCards h1 {
   font-size: clamp(14px, 1.4vw, 40px);
 }
-
 
 .bookCards p {
 font-size: clamp(12px, 1.1vw, 40px);
@@ -290,10 +286,10 @@ cursor: pointer;
 .addNew:hover {
   background-color: rgb(218, 218, 218);
 }
+/* Main Content End--- */
 
 
-
-/* Hovers --- */
+/* Hovers/ Active --- */
 
 header:hover {
   transform: translate(0, -3%);
@@ -314,7 +310,9 @@ background-color: #78df70;
 #remove:hover { 
 background-color: #ff9c9c;
 }
+/* Hovers/ Active End--- */
 
+/* Media ---- */
 @keyframes fade-in {
   0% {
     transform: translateY(-50%) scale(.1);
@@ -356,3 +354,4 @@ background-color: #ff9c9c;
     margin-right: 3%;
   }
 }
+/* Media End---- */

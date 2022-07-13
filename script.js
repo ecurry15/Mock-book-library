@@ -104,7 +104,6 @@ submitNew.addEventListener('click', function() {
     darkWrap.id = 'darkWrapOff';
     createNewBook();
     addBookToLibrary();
-  console.log(myLibrary);
   bookTally += 1;
   totalBookNum.textContent = bookTally;
   if(checkBoxClicked) {
@@ -116,8 +115,15 @@ submitNew.addEventListener('click', function() {
 
 document.addEventListener('click', function(e) {
 if(e.target && e.target.id === 'remove') {
-  console.log(e.target.dataset.bookcard);
-  myLibrary.splice(e.target.dataset.bookcard, 1);
+  if (myLibrary[e.target.dataset.bookcard].read) {
+    readBookTally -= 1;
+    bookReadNum.textContent = readBookTally;
+    bookTally -= 1;
+  totalBookNum.textContent = bookTally;
+  } else if (!myLibrary[e.target.dataset.bookcard].read) {
+    bookTally -= 1;
+  totalBookNum.textContent = bookTally;
+  }
   e.target.closest('div').remove();
 }
 });
